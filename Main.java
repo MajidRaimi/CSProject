@@ -1,5 +1,11 @@
-public class Main{
-    public static void main(String[] args) {
-        System.out.println("Commit From Majid the shit");
+import java.util.*;
+import java.util.concurrent.TimeUnit;
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+
+        OS.loadingBar(10);
+        
+
     }
 }
