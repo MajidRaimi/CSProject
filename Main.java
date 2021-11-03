@@ -8,4 +8,4 @@ public class Main {
         
 
     }
-} // Thanks Waldo
+} // you're welcome majid !!!
