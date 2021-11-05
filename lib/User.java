@@ -66,4 +66,19 @@ public class User {
         this.cardPIN = cardPIN;
     }
 
+    public String fullName(){
+        return this.fName + " " + this.sName + " " + this.lName ;  
+    }
+
+
+    public void deposit(double money){
+        balance += money ; 
+    }
+
+
+    public void withdraw(double money){
+        balance -= money ; 
+    }
+
+
 }

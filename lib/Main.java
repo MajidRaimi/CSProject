@@ -1,5 +1,4 @@
 package lib;
-
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
@@ -9,6 +8,7 @@ enum ErrorTypes {
 
 
 public class Main {
+    static Random random = new Random() ; 
     static Scanner scanner = new Scanner(System.in);
     public static ArrayList<User> arrUsers = new ArrayList<User>();
 
