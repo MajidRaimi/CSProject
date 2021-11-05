@@ -4,7 +4,7 @@ import java.io.*;
 import java.sql.Time;
 import java.util.concurrent.TimeUnit;
 
-public class OS {
+public class OS extends Main{
     // Read CSV File
     public static void readFile(String path) throws IOException {
 
@@ -21,9 +21,9 @@ public class OS {
                 String[] value = line.trim().split(",");
 
                 User addedUser = new User(value[0], value[1], value[2], Double.parseDouble(value[3]), value[4],
-                        Integer.parseInt(value[4]));
+                        Integer.parseInt(value[5]));
 
-                Main.arrUsers.add(addedUser);
+                arrUsers.add(addedUser);
 
             }
         } catch (Exception e) {
@@ -83,10 +83,8 @@ public class OS {
         }
     }
 
-    // TODO: Create A Function That Change Console Color
-
     public static void changeConsoleColor(int number) {
-        // Clears Screen in java
+        // Change Console Color
         try {
             if (System.getProperty("os.name").contains("Windows"))
                 new ProcessBuilder("cmd", "/c", "color " + number).inheritIO().start().waitFor();

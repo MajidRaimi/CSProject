@@ -2,13 +2,12 @@ package lib;
 
 public class User {
 
-    private String fName ; 
-    private String sName ;
-    private String lName ; 
-    private double balance ; 
-    private String cardNumber ; 
-    private int cardPIN ; 
-
+    private String fName;
+    private String sName;
+    private String lName;
+    private double balance;
+    private String cardNumber;
+    private int cardPIN;
 
     public User(String fName, String sName, String lName, double balance, String cardNumber, int cardPIN) {
         this.fName = fName;
@@ -66,10 +65,5 @@ public class User {
     public void setCardPIN(int cardPIN) {
         this.cardPIN = cardPIN;
     }
-
-
-
-
-    
 
 }
