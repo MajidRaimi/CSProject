@@ -1,14 +1,14 @@
 package lib;
+
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 enum ErrorTypes {
-    WrongInput , WrongPinNumber , WrongCardNumber , NoAccount
+    WrongInput, WrongPinNumber, WrongCardNumber, NoAccount
 }
 
-
 public class Main {
-    static Random random = new Random() ; 
+    static Random random = new Random();
     static Scanner scanner = new Scanner(System.in);
     public static ArrayList<User> arrUsers = new ArrayList<User>();
 

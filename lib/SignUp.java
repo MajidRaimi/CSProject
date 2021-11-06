@@ -3,7 +3,7 @@ package lib;
 import java.sql.Time;
 import java.util.concurrent.TimeUnit;
 
-public class SignUp extends Main {
+abstract public class SignUp extends Main {
 
     public static void makeAccount() throws Exception {
         OS.clrscr();

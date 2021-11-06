@@ -3,7 +3,7 @@ package lib;
 import java.util.concurrent.TimeUnit;
 import java.util.Scanner;
 
-public class Sys extends Main {
+abstract public class Sys extends Main {
 
     public static void runApp() throws Exception {
         System.out.println("Welcome To Group 4 ATM");
@@ -98,7 +98,7 @@ public class Sys extends Main {
             errorTypeString = "Wrong Card Number";
             break;
         case NoAccount:
-            errorTypeString = "We Did Not Found Your Account\nTry To Make One";
+            errorTypeString = "Your Account Was Not Found.\nCreate A New Account. ";
         }
 
         OS.clrscr();

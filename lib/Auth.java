@@ -2,7 +2,7 @@ package lib;
 
 import java.util.*;
 
-public class Auth extends Main {
+abstract public class Auth extends Main {
 
     public static boolean validPinNumber(int pinNumber) {
         return (int) Math.floor(Math.log10(pinNumber) + 1) == 4;
@@ -15,9 +15,9 @@ public class Auth extends Main {
     public static int validAccount(String cardNumber, int pinNumber) {
         int index = -1;
 
-        for (int i = 0; i < Main.arrUsers.size(); i++) {
-            if (Main.arrUsers.get(i).getCardNumber().equals(cardNumber)
-                    && Main.arrUsers.get(i).getCardPIN() == pinNumber) {
+        for (int i = 0; i < arrUsers.size(); i++) {
+            if (arrUsers.get(i).getCardNumber().equals(cardNumber)
+                    && arrUsers.get(i).getCardPIN() == pinNumber) {
                 index = i;
                 break;
             }

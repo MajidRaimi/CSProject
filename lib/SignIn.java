@@ -2,7 +2,7 @@ package lib;
 
 import java.util.concurrent.TimeUnit;
 
-public class SignIn extends Main {
+abstract public class SignIn extends Main {
 
     public static void displayInfo(int index) {
         System.out.println("Your Full Name : " + arrUsers.get(index).fullName());
@@ -15,7 +15,7 @@ public class SignIn extends Main {
 
     public static void depositToAccount(int index) {
 
-        System.out.print("Please Enter Your Money : ");
+        System.out.print("Please Enter The Amount Of Money You Would Like To Deposit : ");
         double money = scanner.nextDouble();
         arrUsers.get(index).deposit(money) ;
         System.out.print("Press AnyThing To Exit ");
@@ -25,13 +25,13 @@ public class SignIn extends Main {
 
     public static void withdrawToAccount(int index) throws InterruptedException{
 
-        System.out.print("Please Enter Your Money : ");
+        System.out.print("Please Enter The Amount Of Money You Would Like To Withdraw : ");
         double money = scanner.nextDouble() ;
         
         if(arrUsers.get(index).getBalance() < money){
             OS.clrscr() ; 
-            System.out.println("You Have Only "  + arrUsers.get(index).getBalance() );
-            System.out.println("Please Try To Withdraw Less Than " + money);
+            System.out.println("You Only Have "  + arrUsers.get(index).getBalance() + " SAR" );
+            System.out.println("Please Withdraw Less Than " + money);
             TimeUnit.SECONDS.sleep(6);
             
         } else {

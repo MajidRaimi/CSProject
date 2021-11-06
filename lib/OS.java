@@ -4,7 +4,7 @@ import java.io.*;
 import java.sql.Time;
 import java.util.concurrent.TimeUnit;
 
-public class OS extends Main{
+abstract public class OS extends Main{
     // Read CSV File
     public static void readFile(String path) throws IOException {
 
