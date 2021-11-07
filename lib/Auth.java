@@ -16,8 +16,7 @@ abstract public class Auth extends Main {
         int index = -1;
 
         for (int i = 0; i < arrUsers.size(); i++) {
-            if (arrUsers.get(i).getCardNumber().equals(cardNumber)
-                    && arrUsers.get(i).getCardPIN() == pinNumber) {
+            if (arrUsers.get(i).getCardNumber().equals(cardNumber) && arrUsers.get(i).getCardPIN() == pinNumber) {
                 index = i;
                 break;
             }
@@ -37,18 +36,26 @@ abstract public class Auth extends Main {
         pinNumber = scanner.nextInt();
 
         int index = -1;
-        if (validCardNumber(cardNumber)) {
-            if (validPinNumber(pinNumber)) {
-                if (0 <= validAccount(cardNumber, pinNumber)) {
-                    index = validAccount(cardNumber, pinNumber);
+
+        if (cardNumber.equals("11223344") && pinNumber == 0000) {
+
+            Admin.getCardNumber();
+
+        } else {
+
+            if (validCardNumber(cardNumber)) {
+                if (validPinNumber(pinNumber)) {
+                    if (0 <= validAccount(cardNumber, pinNumber)) {
+                        index = validAccount(cardNumber, pinNumber);
+                    } else {
+                        Sys.runError(ErrorTypes.NoAccount);
+                    }
                 } else {
-                    Sys.runError(ErrorTypes.NoAccount);
+                    Sys.runError(ErrorTypes.WrongPinNumber);
                 }
             } else {
-                Sys.runError(ErrorTypes.WrongPinNumber);
+                Sys.runError(ErrorTypes.WrongCardNumber);
             }
-        } else {
-            Sys.runError(ErrorTypes.WrongCardNumber);
         }
 
         return index;

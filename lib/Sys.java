@@ -37,7 +37,7 @@ abstract public class Sys extends Main {
 
         } catch (Exception e) {
             OS.clrscr();
-            System.out.println("Please Restart The System And Try Again");
+            //System.out.println("Please Restart The System And Try Again");
         }
 
     }

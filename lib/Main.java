@@ -15,7 +15,9 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
         OS.readFile("Database.csv");
+        Security.decryptAll();
         Sys.runApp();
+        Security.decryptAll();
         OS.writeFile("Database.csv");
         scanner.close();
     }

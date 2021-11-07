@@ -21,20 +21,18 @@ abstract public class SignUp extends Main {
         System.out.print("Please Enter Your Last Name      : ");
         lName = scanner.next();
 
-        pinNumber = pinCheck() ; 
+        pinNumber = pinCheck();
 
-        arrUsers.add(new Customer(fName, sName, lName, 0, cardNumber, pinNumber)) ; 
+        arrUsers.add(new Customer(fName, sName, lName, 0, cardNumber, pinNumber));
 
         OS.clrscr();
-        System.out.println("Your Card Number : " + cardNumber );
+        System.out.println("Your Card Number : " + cardNumber);
         System.out.print("Enter Anything To Go To The Main Menu");
-        scanner.nextLine() ; 
-        scanner.nextLine() ; 
+        scanner.nextLine();
+        scanner.nextLine();
         OS.clrscr();
 
-
-
-        Sys.runApp() ; 
+        Sys.runApp();
     }
 
     public static int pinCheck() throws InterruptedException {
@@ -46,21 +44,17 @@ abstract public class SignUp extends Main {
             pinNumber = scanner.nextInt();
             System.out.print("Please Enter It Again To Confirm : ");
             confirm = scanner.nextInt();
-            if(pinNumber != confirm){
-                OS.clrscr() ; 
+            if (pinNumber != confirm) {
+                OS.clrscr();
                 System.out.println("The PIN Number And The Conformation Does Not Equal !\nPlease Try Again");
                 TimeUnit.SECONDS.sleep(6);
             } else {
-                break ; 
+                break;
             }
         }
 
         return pinNumber;
 
     }
-
-
-
-
 
 }
