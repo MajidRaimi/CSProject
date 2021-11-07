@@ -4,7 +4,7 @@ import java.io.*;
 import java.sql.Time;
 import java.util.concurrent.TimeUnit;
 
-abstract public class OS extends Main{
+abstract public interface OS {
     // Read CSV File
     public static void readFile(String path) throws IOException {
 
@@ -20,10 +20,10 @@ abstract public class OS extends Main{
                 }
                 String[] value = line.trim().split(",");
 
-                User addedUser = new User(value[0], value[1], value[2], Double.parseDouble(value[3]), value[4],
+                Customer addedUser = new Customer(value[0], value[1], value[2], Double.parseDouble(value[3]), value[4],
                         Integer.parseInt(value[5]));
 
-                arrUsers.add(addedUser);
+                Main.arrUsers.add(addedUser);
 
             }
         } catch (Exception e) {

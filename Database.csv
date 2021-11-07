@@ -1,6 +1,7 @@
 First Name,Second Name,Last Name,Balance,Card Number,PIN Number
-Majid,Saleh,Al-Raimi,399.0,12121212,1212
-Abdulaziz,Abdullah,Al-Zahrani,700.0,21212121,1212
-Alwaleed,Ahmed,Al-Qurashi,400.0,45454545,1212
-Majid,Saleh,Al-Raimi,1000.0,74163660,1212
-Abdullah,Abdulaziz,Almuqhim,25.0,33473485,1234
+Majid,Saleh,Al-Raimi,399,12121212,1212
+Abdulaziz,Abdullah,Al-Zahrani,700,21212121,1212
+Alwaleed,Ahmed,Al-Qurashi,400,45454545,1212
+Majid,Saleh,Al-Raimi,1000,74163660,1212
+Abdullah,Abdulaziz,Almuqhim,25,33473485,1234
+Faisal,Abduljalil,Bakhurji,800,17431435,1234

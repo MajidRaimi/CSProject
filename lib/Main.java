@@ -10,7 +10,7 @@ enum ErrorTypes {
 public class Main {
     static Random random = new Random();
     static Scanner scanner = new Scanner(System.in);
-    public static ArrayList<User> arrUsers = new ArrayList<User>();
+    public static ArrayList<Customer> arrUsers = new ArrayList<Customer>();
 
     public static void main(String[] args) throws Exception {
 

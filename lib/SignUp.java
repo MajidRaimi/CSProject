@@ -23,7 +23,7 @@ abstract public class SignUp extends Main {
 
         pinNumber = pinCheck() ; 
 
-        arrUsers.add(new User(fName, sName, lName, 0, cardNumber, pinNumber)) ; 
+        arrUsers.add(new Customer(fName, sName, lName, 0, cardNumber, pinNumber)) ; 
 
         OS.clrscr();
         System.out.println("Your Card Number : " + cardNumber );
