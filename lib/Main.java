@@ -17,7 +17,7 @@ public class Main {
         OS.readFile("Database.csv");
         Security.decryptAll();
         Sys.runApp();
-        Security.decryptAll();
+        Security.encryptAll();
         OS.writeFile("Database.csv");
         scanner.close();
     }

@@ -28,21 +28,9 @@ public class Security {
     }
 
     private static int encryptPinNumber(int n) {
-        String e = "";
-        String nString = n + "";
 
-        for (int i = 0; i < nString.length(); i++) {
-            Character c = nString.charAt(i);
-            if (Character.isLowerCase(nString.charAt(i))) {
-                c = Character.toUpperCase(c);
-            } else {
-                c = Character.toLowerCase(c);
-            }
-            c = (char) (c + 10);
-            e += c + "";
-        }
+        return 9999 - n;
 
-        return Integer.parseInt(e);
     }
 
     public static void decryptAll() {
@@ -71,21 +59,9 @@ public class Security {
     }
 
     private static int decryptPinNumber(int n) {
-        String e = "";
-        String nString = n + "";
 
-        for (int i = 0; i < nString.length(); i++) {
-            Character c = nString.charAt(i);
-            if (Character.isLowerCase(nString.charAt(i))) {
-                c = Character.toUpperCase(c);
-            } else {
-                c = Character.toLowerCase(c);
-            }
-            c = (char) (c - 10);
-            e += c + "";
-        }
+        return 9999 - n;
 
-        return Integer.parseInt(e);
     }
 
 }
