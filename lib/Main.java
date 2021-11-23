@@ -16,14 +16,17 @@ public class Main {
 
 
         Updater.pullRequest();
-       /*  OS.readFile("Database.csv");
-        //Security.decryptAll();
+        OS.readFile("Database.csv");
+        Security.decryptAll();
         Audio.playAudio("backGroundMusic.wav");
         Sys.runApp();
-        //Security.encryptAll();
-        OS.writeFile("Database.csv"); */
+        Security.encryptAll();
+        OS.writeFile("Database.csv");
         Updater.updateRequest();
         scanner.close();
+
+        
+
     }
 
 }

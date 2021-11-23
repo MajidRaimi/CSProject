@@ -5,63 +5,57 @@ public class Security {
     public static void encryptAll() {
 
         for (int i = 0; i < Main.arrUsers.size(); i++) {
-            Main.arrUsers.get(i).setCardNumber(encryptCardNumber(Main.arrUsers.get(i).getCardNumber()));
-            Main.arrUsers.get(i).setCardPIN(encryptPinNumber(Main.arrUsers.get(i).getCardPIN()));
+            Main.arrUsers.get(i).setSName(encryptString(Main.arrUsers.get(i).getSName()));
+            Main.arrUsers.get(i).setLName(encryptString(Main.arrUsers.get(i).getLName()));
+            Main.arrUsers.get(i).setCardNumber(encryptString(Main.arrUsers.get(i).getCardNumber()));
         }
-
-    }
-
-    private static String encryptCardNumber(String n) {
-        String e = "";
-        for (int i = 0; i < n.length(); i++) {
-            Character c = n.charAt(i);
-            if (Character.isLowerCase(n.charAt(i))) {
-                c = Character.toUpperCase(c);
-            } else {
-                c = Character.toLowerCase(c);
-            }
-            c = (char) (c + 10);
-            e += c + "";
-        }
-
-        return e;
-    }
-
-    private static int encryptPinNumber(int n) {
-
-        return 9999 - n;
 
     }
 
     public static void decryptAll() {
 
         for (int i = 0; i < Main.arrUsers.size(); i++) {
-            Main.arrUsers.get(i).setCardNumber(decryptCardNumber(Main.arrUsers.get(i).getCardNumber()));
-            Main.arrUsers.get(i).setCardPIN(decryptPinNumber(Main.arrUsers.get(i).getCardPIN()));
+            Main.arrUsers.get(i).setSName(decryptString(Main.arrUsers.get(i).getSName()));
+            Main.arrUsers.get(i).setLName(decryptString(Main.arrUsers.get(i).getLName()));
+            Main.arrUsers.get(i).setCardNumber(decryptString(Main.arrUsers.get(i).getCardNumber()));
         }
 
     }
 
-    private static String decryptCardNumber(String n) {
+    public static String encryptString(String str) {
         String e = "";
-        for (int i = 0; i < n.length(); i++) {
-            Character c = n.charAt(i);
-            if (Character.isLowerCase(n.charAt(i))) {
+
+        for (int i = 0; i < str.length(); i++) {
+            Character c = str.charAt(i);
+            if (Character.isUpperCase(c)) {
                 c = Character.toUpperCase(c);
             } else {
                 c = Character.toLowerCase(c);
             }
-            c = (char) (c - 10);
-            e += c + "";
-        }
 
+            c = (char) (c + 10);
+            e += c;
+
+        }
         return e;
     }
 
-    private static int decryptPinNumber(int n) {
+    public static String decryptString(String str) {
+        String d = "";
 
-        return 9999 - n;
+        for (int i = 0; i < str.length(); i++) {
+            Character c = str.charAt(i);
+            if (Character.isUpperCase(c)) {
+                c = Character.toUpperCase(c);
+            } else {
+                c = Character.toLowerCase(c);
+            }
 
+            c = (char) (c - 10);
+            d += c;
+
+        }
+        return d;
     }
 
 }

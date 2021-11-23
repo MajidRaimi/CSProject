@@ -11,7 +11,7 @@ public class Updater extends Main {
         try {
 
             new ProcessBuilder("cmd", "/c", "git pull origin master").inheritIO().start().waitFor();
-            
+            OS.clrscr();
 
         } catch (IOException | InterruptedException ex) {
         }
@@ -23,7 +23,7 @@ public class Updater extends Main {
         try {
 
             new ProcessBuilder("cmd", "/c", "git add Database.csv").inheritIO().start().waitFor();
-            
+            OS.clrscr();
         } catch (IOException | InterruptedException ex) {
         }
 
@@ -36,7 +36,7 @@ public class Updater extends Main {
         try {
 
             new ProcessBuilder("cmd", "/c", "git commit -m \"" + now.toString() + "\"").inheritIO().start().waitFor();
-            
+            OS.clrscr();
         } catch (IOException | InterruptedException ex) {
         }
     }
@@ -46,18 +46,16 @@ public class Updater extends Main {
         try {
 
             new ProcessBuilder("cmd", "/c", "git push origin master ").inheritIO().start().waitFor();
-            
+            OS.clrscr();
         } catch (IOException | InterruptedException ex) {
         }
 
     }
 
     public static void updateRequest() {
-
         addRequest();
         commitRequest();
-        pullRequest();
-
+        pushRequest();
     }
 
 }
