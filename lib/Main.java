@@ -15,10 +15,10 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
         OS.readFile("Database.csv");
-        Security.decryptAll();
+        //Security.decryptAll();
         Audio.playAudio("backGroundMusic.wav");
         Sys.runApp();
-        Security.encryptAll();
+        //Security.encryptAll();
         OS.writeFile("Database.csv");
         scanner.close();
     }

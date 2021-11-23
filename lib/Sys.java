@@ -6,7 +6,8 @@ import java.util.Scanner;
 abstract public class Sys extends Main {
 
     public static void runApp() throws Exception {
-        System.out.println("Welcome To Group 4 ATM");
+
+        System.out.println(" ------- Group 4 ATM -------");
         System.out.println("1 - Login To Your Account");
         System.out.println("2 - Make A New Account");
         System.out.println("0 - Exit");
