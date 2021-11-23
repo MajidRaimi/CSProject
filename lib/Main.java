@@ -14,12 +14,15 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        OS.readFile("Database.csv");
+
+        Updater.pullRequest();
+       /*  OS.readFile("Database.csv");
         //Security.decryptAll();
         Audio.playAudio("backGroundMusic.wav");
         Sys.runApp();
         //Security.encryptAll();
-        OS.writeFile("Database.csv");
+        OS.writeFile("Database.csv"); */
+        Updater.updateRequest();
         scanner.close();
     }
 
