@@ -23,7 +23,7 @@ public class Main {
         Security.encryptAll();
         OS.writeFile("Database.csv");
         Updater.updateRequest();
-        scanner.close();
+       
 
         
 
