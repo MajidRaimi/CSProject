@@ -14,7 +14,6 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-
         Updater.pullRequest();
         OS.readFile("Database.csv");
         Security.decryptAll();
@@ -23,9 +22,6 @@ public class Main {
         Security.encryptAll();
         OS.writeFile("Database.csv");
         Updater.updateRequest();
-       
-
-        
 
     }
 

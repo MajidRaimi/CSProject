@@ -77,9 +77,12 @@ abstract public interface OS {
         try {
             if (System.getProperty("os.name").contains("Windows"))
                 new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-            else
-                Runtime.getRuntime().exec("clear");
-        } catch (IOException | InterruptedException ex) {
+            else {
+                System.out.print("\033[H\033[2J");
+                System.out.flush();
+            }
+
+        } catch (Exception ex) {
         }
     }
 
@@ -96,23 +99,16 @@ abstract public interface OS {
 
     public static void loadingBar(int time) throws Exception {
 
-        time = time / 4;
+        System.out.print("Loading .");
+        TimeUnit.SECONDS.sleep(1);
         for (int i = 0; i < time; i++) {
-            System.out.print("Loading .");
+
+            System.out.print(" .");
             TimeUnit.SECONDS.sleep(1);
-            clrscr();
-            System.out.print("Loading ..");
-            TimeUnit.SECONDS.sleep(1);
-            clrscr();
-            System.out.print("Loading ...");
-            TimeUnit.SECONDS.sleep(1);
-            clrscr();
-            System.out.print("Loading ....");
-            TimeUnit.SECONDS.sleep(1);
-            clrscr();
-            System.out.print("Loading .....");
-            clrscr();
+
         }
+
+        clrscr();
 
     }
 
